@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShutterStory</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <form action="feedback.php" method="POST"> 
+      <div class="rectangle">
+        <div class="account-alert-outline"></div>
+        <div class="shutter-story">
+          <span class="shutter">Shutter</span><span class="story">Story</span>
+        </div>
+        <div class="search"><div class="vector"></div></div>
+        <div class="shopping-cart-outlined"><div class="vector-1"></div></div>
+        <span class="account">Account</span
+        ><span class="rental-service">Photography Service</span
+        ><span class="contact-2">Contact</span>
+        <a href="Homepage.php" class="home">Home</a>
+        <span class="shop">Product</span>
+        <div class="mdi-account-alert-outline"></div>
+      </div>
+      <div class="rectangle-3">
+        <div class="meubel-house-logos"></div>
+        <span class="contact-4">Contact</span>
+      </div>
+
+      <?php
+session_start();
+
+// Database connection
+$conn = new mysqli('localhost', 'root', '', 'shutterstory_db');
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Get the session ID
+$session_id = session_id();
+
+// Fetch cart items for the current session
+$sql = "SELECT products.product_name, products.price, products.image, cart.quantity 
+        FROM cart 
+        INNER JOIN products ON cart.product_id = products.product_id
+        WHERE cart.session_id = '$session_id'";
+
+$result = $conn->query($sql);
+
+// Check if there are items in the cart
+if ($result->num_rows > 0) {
+    echo '<h2>Your Cart</h2>';
+    echo '<table border="1">';
+    echo '<tr><th>Product Image</th><th>Product Name</th><th>Quantity</th><th>Price</th><th>Total</th></tr>';
+    
+    // Loop through each cart item
+    while($row = $result->fetch_assoc()) {
+        $product_name = $row['product_name'];
+        $quantity = $row['quantity'];
+        $price = $row['price'];
+        $total = $price * $quantity;
+        $image = $row['image'] ? base64_encode($row['image']) : ''; // Encode the image for display
+        
+        // Display each cart item in a table row
+        echo '<tr>';
+        echo '<td><img src="data:image/jpeg;base64,' . $image . '" alt="Product Image" style="width:100px; height:100px;"></td>';
+        echo '<td>' . $product_name . '</td>';
+        echo '<td>' . $quantity . '</td>';
+        echo '<td>RM' . $price . '</td>';
+        echo '<td>RM' . $total . '</td>';
+        echo '</tr>';
+    }
+    
+    echo '</table>';
+} else {
+    echo '<p>Your cart is empty.</p>';
+}
+
+$conn->close();
+?>
+
+      
+      <div class="rectangle-f">
+        <div class="flex-row-ddd">
+          <span class="free-delivery">Free Delivery</span
+          ><span class="secure-payment">Secure Payment</span>
+        </div>
+        <div class="flex-row-d-10">
+          <span class="orders-over-rm">For all orders over Rm 5000.</span
+          ><span class="secure-payment-11">100% secure payment.</span>
+        </div>
+      </div>
+      <div class="rectangle-12">
+        <div class="flex-row-a">
+          <span class="links">Links</span><span class="help">Help</span>
+        </div>
+        <div class="flex-row">
+          <a href="Homepage.php" class="home-13">Home</a
+          ><span class="photography-service">Photography Service</span>
+        </div>
+        <div class="flex-row-a-14">
+          <span class="shop-15">Product</span
+          ><span class="rental-policy">Rental Policy</span>
+        </div>
+        <span class="about">About</span><span class="contact-16">Contact</span
+        ><span class="all-rights-reserved"
+          >2024 ShutterStory. All rights reserved</span
+        >
+      </div>
+      <div class="line"></div>
+    </div>
+  </body>
+</html>

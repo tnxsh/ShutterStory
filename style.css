@@ -1,0 +1,76 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa; /* Soft background */
+    color: #333;
+}
+
+.sidebar {
+    background-color: #343a40; /* Dark sidebar */
+    color: #ffffff; /* White text */
+    padding: 15px; /* Padding around sidebar items */
+    min-height: 100vh; /* Full height for sidebar */
+}
+
+.sidebar .nav-link {
+    color: #ffffff; /* White links */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057; /* Darker background on hover */
+}
+
+.sidebar .nav-link.active {
+    background-color: #4c5caf; /* Active link background */
+    color: #ffffff; /* Active link color */
+}
+
+.main-content {
+    background-color: #ffffff; /* White main content */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 20px; /* Padding */
+    margin-left: 15px; /* Space between sidebar and main content */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 1; /* Allow main content to take available space */
+}
+
+h1.h2 {
+    color: #4c5caf; /* Blue heading */
+}
+
+#admin-content {
+    margin-top: 20px; /* Space above the dynamic content */
+}
+
+footer {
+    margin-top: 20px; /* Space above the footer */
+    text-align: center; /* Center footer text */
+    color: #6c757d; /* Light gray text for footer */
+}
+
+.nav-item {
+    margin-bottom: 10px; /* Spacing between sidebar items */
+}
+
+/* Flexbox for layout */
+.row {
+    display: flex; /* Use flexbox for layout */
+}
+
+.col-md-2 {
+    flex: 0 0 16.6667%; /* Fixed width for sidebar */
+}
+
+.col-md-10 {
+    flex: 0 0 83.3333%; /* Fixed width for main content */
+    bottom: 1003px;
+    left: 323px;
+}
+.feedback{
+    flex: auto;
+    bottom: 1003px;
+    left: 323px;
+}
+
+

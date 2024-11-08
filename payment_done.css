@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.main-container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 33px;
+    border-radius: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 160px;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #333;}
+
+h2 {
+    color: #666;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="hidden"] {
+    display: none; /* Hides hidden inputs */
+}
+
+select, button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .main-container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+.button {
+    display: inline-block; /* Makes the link behave like a block element */
+    padding: 10px 20px; /* Adds padding to the button */
+    font-size: 16px; /* Sets the font size */
+    color: #fff; /* Text color */
+    margin-left: 280px;
+    background-color: #4c5caf; /* Button background color */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounds the corners */
+    text-decoration: none; /* Removes underline */
+    text-align: center; /* Centers the text */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #4c5caf; /* Darker background color on hover */
+}

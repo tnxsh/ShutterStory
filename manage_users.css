@@ -1,0 +1,73 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa; /* Soft background */
+    color: #333; /* Dark text */
+    margin: 20px; /* Margin around the body */
+}
+
+h2 {
+    color: #007bff; /* Blue heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Remove spacing between table cells */
+    margin-bottom: 20px; /* Space below the table */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the table */
+}
+
+.table th, .table td {
+    padding: 12px; /* Padding inside table cells */
+    text-align: left; /* Align text to the left */
+    border: 1px solid #dee2e6; /* Light border around cells */
+}
+
+.table th {
+    background-color: #007bff; /* Blue background for header */
+    color: white; /* White text for header */
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+.table tr:hover {
+    background-color: #e2e6ea; /* Light gray on hover */
+}
+
+.btn {
+    margin-right: 10px; /* Space between buttons */
+}
+
+.btn-success {
+    background-color: #28a745; /* Green button for Add New User */
+    color: white; /* White text for button */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Blue button for Edit */
+    color: white; /* White text for button */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Red button for Delete */
+    color: white; /* White text for button */
+}
+
+.btn:hover {
+    opacity: 0.8; /* Slight opacity change on hover */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+}

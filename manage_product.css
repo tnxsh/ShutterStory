@@ -1,0 +1,50 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa; /* Soft background */
+    color: #333; /* Dark text */
+    margin: 20px; /* Margin around the body */
+}
+
+h2 {
+    color: #000000;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Remove spacing between table cells */
+    margin-bottom: 20px; /* Space below the table */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the table */
+}
+
+th, td {
+    padding: 12px; /* Padding inside table cells */
+    text-align: left; /* Align text to the left */
+    border: 1px solid #dee2e6; /* Light border around cells */
+}
+
+th {
+    background-color: #25989fd4; /* Blue background for header */
+    color: white; /* White text for header */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+tr:hover {
+    background-color: #e2e6ea; /* Light gray on hover */
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: #2b22b6; /* Blue link color */
+    margin-right: 10px; /* Space between links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

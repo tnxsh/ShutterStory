@@ -1,0 +1,265 @@
+/* Apply a global style */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #24989fd4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.account-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    transition: transform 0.3s ease; 
+}
+
+/* Add hover effect to the container */
+.account-container:hover {
+    transform: scale(1.02); 
+}
+
+/* Headings for the account page */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Uppercase headings for emphasis */
+    letter-spacing: 1px; /* Increase spacing for a modern touch */
+}
+
+/* Styling for the user details (Email, Name, Address, etc.) */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Bold label for field names */
+p strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Style the logout button */
+form button {
+    background-color: #1d3862; /* Bright button color */
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    padding: 12px 20px; /* Slightly larger padding */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+}
+
+/* Button hover effect */
+form button:hover {
+    background-color: #1d3862;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Make the content responsive for smaller screens */
+@media (max-width: 768px) {
+    .account-container {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+/* Add some padding to the body to prevent content from sticking to edges */
+body {
+    padding: 20px; /* Add padding */
+}
+
+/* Optional: Adding a subtle animation to the button */
+form button:active {
+    transform: translateY(1px); /* Sink effect on click */
+}
+
+/* Style for the Edit button */
+button {
+    background-color: #1d3862;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Hover effect for the Edit button */
+button:hover {
+    background-color: #1d3862;
+}
+
+/* Styling the edit form */
+#editForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Styling the labels and inputs inside the form */
+#editForm label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    color: #333;
+}
+
+#editForm input[type="text"],
+#editForm input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Style for the update button inside the form */
+#editForm button {
+    background-color: #1d3862;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Hover effect for the update button */
+#editForm button:hover {
+    background-color: #1d3862;
+}
+
+/* Style the form's overall layout on smaller screens */
+@media (max-width: 768px) {
+    #editForm {
+        width: 90%;
+        padding: 15px;
+    }
+}
+/* Add this to my_account.css */
+
+/* Style for the order status section */
+.order-status-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Table header styles */
+.order-status-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Table data cell styles */
+.order-status-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Add some hover effects */
+.order-status-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Align the total amount */
+.order-status-table td:nth-child(4) {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Make the table responsive */
+@media (max-width: 768px) {
+    .order-status-table {
+        font-size: 14px;
+    }
+}
+/* Style for the rental history table */
+.rental-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header styles */
+.rental-history-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+    text-transform: uppercase;
+}
+
+/* Table data cell styles */
+.rental-history-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+/* Hover effects on table rows */
+.rental-history-table tr:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Specific styling for Total Cost column */
+.rental-history-table td:nth-child(5) {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Make the table responsive */
+@media (max-width: 768px) {
+    .rental-history-table {
+        font-size: 14px;
+    }
+    
+    .rental-history-table th, .rental-history-table td {
+        padding: 8px;
+    }
+}
+
